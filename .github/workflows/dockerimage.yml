@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@c85684db76ba6ef08713c10cf4befe3318887415
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: Publish Docker Image to GPR
-      uses: machine-learning-apps/gpr-docker-publish@master
+      uses: machine-learning-apps/gpr-docker-publish@5b71bce8513330a62b8b61ba846d37caaf2a85ba
       id: docker
       with:
         IMAGE_NAME: 'centos7-rbenv'
