@@ -18,8 +18,8 @@ jobs:
       with:
         IMAGE_NAME: 'centos7-rbenv'
         TAG: 'test-tag'
-        DOCKERFILE_PATH: '/Dockerfile'
-        BUILD_CONTEXT: '/'
+        DOCKERFILE_PATH: 'centos7-rbenv/Dockerfile'
+        BUILD_CONTEXT: 'centos7-rbenv/'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
